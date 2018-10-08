@@ -1,0 +1,17 @@
+<%= form_with(model: magento, local: true) do |form| %>
+  <% if magento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(magento.errors.count, "error") %> prohibited this magento from being saved:</h2>
+
+      <ul>
+      <% magento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

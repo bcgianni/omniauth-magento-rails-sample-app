@@ -14,3 +14,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      - MAGENTO_URL=aaaa
+      - MAGENTO_CONSUMER_KEY=aaaa
+      - MAGENTO_CONSUMER_SECRET=aaaa
